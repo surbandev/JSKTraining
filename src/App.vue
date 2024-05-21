@@ -10,7 +10,7 @@ import { IonApp, IonRouterOutlet } from '@ionic/vue';
 
 <style>
 .background-image-home {
-  background-image: url('C:\Dev\JSKTraining\src\media\JordanProOne.jpg');
+  background-image: url('..\src\media\JordanProOne.jpg');
   background-size: cover;
   background-position: center;
   height: 900px;
@@ -19,7 +19,7 @@ import { IonApp, IonRouterOutlet } from '@ionic/vue';
   
 }
 .background-image-goal {
-  background-image: url('C:\Dev\JSKTraining\src\media\vector-gold-soccer-ball.jpg');
+  background-image: url('..\src\media\vector-gold-soccer-ball.jpg');
   /* background-color: #121212; */
   background-size: cover;
   background-position: center;
