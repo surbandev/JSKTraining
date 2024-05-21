@@ -1,56 +1,72 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
-        <ion-title>Blank</ion-title>
-      </ion-toolbar>
-    </ion-header>
-
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
-      <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-      </div>
+    <ion-content>
+      <ion-icon icon="heart"></ion-icon>
+      <ion-list>
+        <ion-item>
+          <ion-checkbox label-placement="end" justify="start">
+            <h1>Create Idea</h1>
+            <ion-note>Run Idea By Brandy</ion-note>
+          </ion-checkbox>
+          <ion-badge color="success" slot="end">5 Days</ion-badge>
+        </ion-item>
+      </ion-list>
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button @click="() => router.push('/new')">
+          <ion-icon :icon="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
     </ion-content>
   </ion-page>
 </template>
 
-<script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+<script setup>
+  import {
+    IonBadge,
+    IonCheckbox,
+    IonContent,
+    IonFab,
+    IonFabButton,
+    IonHeader,
+    IonIcon,
+    IonItem,
+    IonList,
+    IonNote,
+    IonPage,
+    IonTitle,
+    IonToolbar,
+  } from '@ionic/vue';
+  import { add } from 'ionicons/icons';
+  import { useRouter } from 'vue-router';
+  const router = useRouter();
 </script>
 
 <style scoped>
-#container {
-  text-align: center;
-  
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
+  #container {
+    text-align: center;
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  
-  color: #8c8c8c;
-  
-  margin: 0;
-}
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
 
-#container a {
-  text-decoration: none;
-}
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #8c8c8c;
+
+    margin: 0;
+  }
+
+  #container a {
+    text-decoration: none;
+  }
 </style>

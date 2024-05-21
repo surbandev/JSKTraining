@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router';
+import { addIcons } from 'ionicons';
+import { heart } from 'ionicons/icons';
 
 import { IonicVue } from '@ionic/vue';
 
@@ -33,6 +35,10 @@ import '@ionic/vue/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
+
+addIcons({
+  heart: heart,
+});
 
 const app = createApp(App)
   .use(IonicVue)
