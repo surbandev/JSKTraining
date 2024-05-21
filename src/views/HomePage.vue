@@ -13,25 +13,14 @@
           <p>Improve your skills and become a better player with our comprehensive training programs.</p>
         </section>
         <section class="section">
-          <h2>Section 1</h2>
-          <p>Details about the first section of training.</p>
         </section>
         <section class="section">
-          <h2>Section 2</h2>
-          <p>Details about the second section of training.</p>
         </section>
         <section class="section">
-          <h2>Section 3</h2>
-          <p>Details about the third section of training.</p>
         </section>
         <section class="section">
-          <h2>Conclusion</h2>
           <p>Wrap up the training session and get ready to start.</p>
-          <IonFabButton vertical="bottom" horizontal="end" slot="fixed">
-            <IonButton @click="goToDetails">
-              <IonIcon :icon="add"></IonIcon>
-            </IonButton>
-          </IonFabButton>
+          <IonButton expand="block" class="start-button" style="color: white" @click="goToDetails">Get Started!</IonButton>
         </section>
       </div>
       <!-- GOAL SECTION -->
@@ -63,10 +52,10 @@ import {
   IonHeader,
   IonPage,
   IonToolbar,
-  IonFab,
-IonFabButton,
-IonIcon,
+  IonFabButton,
+  IonIcon,
 } from '@ionic/vue';
+import { add } from 'ionicons/icons';
 
 export default {
   name: 'Home',
