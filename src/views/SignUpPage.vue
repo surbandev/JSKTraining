@@ -3,7 +3,7 @@
     <IonHeader>
       <IonToolbar>
         <IonButton slot="start">
-          <IonBackButton default-href="/home"></IonBackButton>
+          <IonBackButton style="color: white" default-href="/home"></IonBackButton>
         </IonButton>
         <IonTitle>Select Time Periods</IonTitle>
       </IonToolbar>
@@ -15,7 +15,7 @@
           end: '19:00',
           step: '30'
         }" />
-      <IonButton expand="block" @click="confirmSelection">Confirm Selection</IonButton>
+      <IonButton expand="block" style="color: white" @click="confirmSelection">Confirm Selection</IonButton>
     </IonContent>
   </IonPage>
 </template>

@@ -63,7 +63,7 @@
                   <IonLabel position="floating" class="margin-vertical-10">Message</IonLabel>
                   <IonTextarea v-model="message" required></IonTextarea>
                 </IonItem>
-                <IonButton expand="block" type="submit">Submit</IonButton>
+                <IonButton expand="block" type="submit" style="color: white">Submit</IonButton>
               </form>
             </IonCol>
           </IonRow>
