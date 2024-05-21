@@ -9,8 +9,7 @@
       <!-- HOME SECTION -->
       <div class="background-image-home margin-vertical-10">
         <section class="center">
-          <h1 class="title">Welcome to Soccer Training</h1>
-          <p>Improve your skills and become a better player with our comprehensive training programs.</p>
+          <h1 class="title">Train with the pros and become a better soccer player today!</h1>
         </section>
         <section class="section">
         </section>
@@ -19,7 +18,12 @@
         <section class="section">
         </section>
         <section class="section">
-          <p>Wrap up the training session and get ready to start.</p>
+        </section>
+        <section class="section">
+        </section>
+        <section class="section">
+        </section>
+        <section class="section">
           <IonButton expand="block" class="start-button" style="color: white" @click="goToDetails">Get Started!</IonButton>
         </section>
       </div>
@@ -36,8 +40,6 @@
         <section class="section">
         </section>
         <section class="section">
-          <h2>Conclusion</h2>
-          <p>Wrap up the training session and get ready to start.</p>
         </section>
       </div>
     </IonContent>
