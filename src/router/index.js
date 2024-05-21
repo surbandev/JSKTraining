@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import HomePage from '@/views/HomePage.vue';
-import NewItem from '@/views/NewItem.vue';
+import SignUpPage from '@/views/SignUpPage.vue';
 
 const routes = [
   {
@@ -13,9 +13,9 @@ const routes = [
     component: HomePage,
   },
   {
-    path: '/new',
-    name: 'NewItem',
-    component: NewItem,
+    path: '/signUp',
+    name: 'SignUpPage',
+    component: SignUpPage,
   },
 ];
 

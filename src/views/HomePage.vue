@@ -1,72 +1,82 @@
 <template>
-  <ion-page>
-    <ion-content>
-      <ion-icon icon="heart"></ion-icon>
-      <ion-list>
-        <ion-item>
-          <ion-checkbox label-placement="end" justify="start">
-            <h1>Create Idea</h1>
-            <ion-note>Run Idea By Brandy</ion-note>
-          </ion-checkbox>
-          <ion-badge color="success" slot="end">5 Days</ion-badge>
-        </ion-item>
-      </ion-list>
-      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button @click="() => router.push('/new')">
-          <ion-icon :icon="add"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
-    </ion-content>
-  </ion-page>
+  <IonPage>
+    <IonHeader>
+      <IonToolbar>
+        <IonCardTitle class="center">JSK Training</IonCardTitle>
+      </IonToolbar>
+    </IonHeader>
+    <IonContent class="ion-padding">
+      <!-- HOME SECTION -->
+      <div class="background-image-home margin-vertical-10">
+        <section class="center">
+          <h1 class="title">Welcome to Soccer Training</h1>
+          <p>Improve your skills and become a better player with our comprehensive training programs.</p>
+        </section>
+        <section class="section">
+          <h2>Section 1</h2>
+          <p>Details about the first section of training.</p>
+        </section>
+        <section class="section">
+          <h2>Section 2</h2>
+          <p>Details about the second section of training.</p>
+        </section>
+        <section class="section">
+          <h2>Section 3</h2>
+          <p>Details about the third section of training.</p>
+        </section>
+        <section class="section">
+          <h2>Conclusion</h2>
+          <p>Wrap up the training session and get ready to start.</p>
+          <IonFabButton vertical="bottom" horizontal="end" slot="fixed">
+            <IonButton @click="goToDetails">
+              <IonIcon :icon="add"></IonIcon>
+            </IonButton>
+          </IonFabButton>
+        </section>
+      </div>
+      <!-- GOAL SECTION -->
+      <div class="background-image-goal">
+        <section class="center">
+          <h1 class="title">Whats my goal?</h1>
+          <p>Improve your skills and become a better player with our comprehensive training programs.</p>
+        </section>
+        <section class="section">
+        </section>
+        <section class="section">
+        </section>
+        <section class="section">
+        </section>
+        <section class="section">
+          <h2>Conclusion</h2>
+          <p>Wrap up the training session and get ready to start.</p>
+        </section>
+      </div>
+    </IonContent>
+  </IonPage>
 </template>
 
-<script setup>
-  import {
-    IonBadge,
-    IonCheckbox,
-    IonContent,
-    IonFab,
-    IonFabButton,
-    IonHeader,
-    IonIcon,
-    IonItem,
-    IonList,
-    IonNote,
-    IonPage,
-    IonTitle,
-    IonToolbar,
-  } from '@ionic/vue';
-  import { add } from 'ionicons/icons';
-  import { useRouter } from 'vue-router';
-  const router = useRouter();
+<script>
+import {
+  IonButton,
+  IonCardTitle,
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonToolbar,
+  IonFab,
+IonFabButton,
+IonIcon,
+} from '@ionic/vue';
+
+export default {
+  name: 'Home',
+  methods: {
+    goToDetails() {
+      this.$router.push({ name: 'SignUpPage' });
+    }
+  },
+  components: { IonCardTitle, IonToolbar, IonHeader, IonButton, IonPage, IonContent, IonFabButton, IonIcon }
+};
 </script>
 
-<style scoped>
-  #container {
-    text-align: center;
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  #container strong {
-    font-size: 20px;
-    line-height: 26px;
-  }
-
-  #container p {
-    font-size: 16px;
-    line-height: 22px;
-
-    color: #8c8c8c;
-
-    margin: 0;
-  }
-
-  #container a {
-    text-decoration: none;
-  }
-</style>
+<style scoped></style>
